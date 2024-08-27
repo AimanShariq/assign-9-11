@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Question 1
+
+
+    <h1>Enter your city</h1>
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button onclick="welcomeUser()">Submit</button>
+    <p id="welcomeMessage"></p>
+
+    <script>
+        function welcomeUser() {
+            var city = document.getElementById("cityInput").value;
+            var message = "";
+            if (city.toLowerCase() === "karachi") {
+                message = "Welcome to city of lights";
+            }
+            document.getElementById("welcomeMessage").innerText = message;
+        }
+    </script> -->
+
+
+    <!-- Question 2
+
+
+<title>Greeting</title>
+    <script>
+        function displayGreeting() {
+            const gender = prompt("Please enter your gender (male or female):").toLowerCase();
+            let greeting;
+
+            if (gender === "male") {
+                greeting = "Good Morning Sir.";
+            } else if (gender === "female") {
+                greeting = "Good Morning Ma’am.";
+            } else {
+                greeting = "Hello!";
+            }
+
+            document.getElementById("output").textContent = greeting;
+        }
+    </script>
+
+    <h1>Personalized Greeting</h1>
+    <button onclick="displayGreeting()">Get Greeting</button>
+    <p id="output"></p> -->
+
+<!-- 
+    Question 3
+
+
+    <title>Traffic Signal</title>
+    <label for="colorInput">Enter the color of the traffic signal:</label>
+    <input type="text" id="colorInput">
+    <button onclick="showMessage()">Show Message</button>
+    <p id="message"></p>
+
+    <script>
+        function showMessage() {
+            const color = document.getElementById("colorInput").value.toLowerCase();
+            let message;
+
+            switch (color) {
+                case "red":
+                    message = "Must Stop.";
+                    break;
+                case "yellow":
+                    message = "Ready to move.";
+                    break;
+                case "green":
+                    message = "Move now.";
+                    break;
+                default:
+                    message = "Invalid color. Please enter 'red', 'yellow', or 'green'.";
+            }
+
+            document.getElementById("message").textContent = message;
+        }
+    </script> -->
+
+
+    <!-- Question 4
+
+
+<title>Fuel Check</title>
+    <h1>Fuel Level Checker</h1>
+    <label for="fuelInput">Enter remaining fuel (in litres):</label>
+    <input type="number" id="fuelInput">
+    <button onclick="checkFuel()">Check Fuel</button>
+    <p id="result"></p>
+
+    <script>
+        function checkFuel() {
+            const fuel = parseFloat(document.getElementById("fuelInput").value);
+            if (fuel < 0.25) {
+                document.getElementById("result").textContent = "Please refill the fuel in your car.";
+            } else {
+                document.getElementById("result").textContent = "Fuel level is sufficient!";
+            }
+        }
+    </script> -->
+
+
+
+    <!-- Question 5
+
+
+    <title>JavaScript Conditional Statements</title>
+    <script>
+        // a.
+        var a = 4;
+        if (++a === 5) {
+            alert("given condition for variable a is true");
+        }
+
+        // b.
+        var b = 82;
+        if (b++ === 83) {
+            alert("given condition for variable b is true");
+        }
+
+        // c.
+        var c = 12;
+        if (c++ === 13) {
+            alert("condition 1 is true");
+        }
+        if (c === 13) {
+            alert("condition 2 is true");
+        }
+        if (++c < 14) {
+            alert("condition 3 is true");
+        }
+        if (c === 14) {
+            alert("condition 4 is true");
+        }
+
+        // d.
+        var materialCost = 20000;
+        var laborCost = 2000;
+        var totalCost = materialCost + laborCost;
+        if (totalCost === laborCost + materialCost) {
+            alert("The cost equals");
+        }
+
+        // e.
+        if (true) {
+            alert("True");
+        }
+        if (false) {
+            alert("False");
+        }
+
+        // f.
+        if ("car" < "cat") {
+            alert("car is smaller than cat");
+        }
+    </script> -->
+
+
+    <!-- Question 6
+
+    <title>Grade Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+<body>
+    <div class="container">
+        <h2>Grade Calculator</h2>
+        <label for="subject1">Marks in Subject 1:</label>
+        <input type="number" id="subject1" required>
+        <label for="subject2">Marks in Subject 2:</label>
+        <input type="number" id="subject2" required>
+        <label for="subject3">Marks in Subject 3:</label>
+        <input type="number" id="subject3" required>
+        <label for="totalMarks">Total Marks:</label>
+        <input type="number" id="totalMarks" required>
+        <button onclick="calculateGrade()">Calculate</button>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script> -->
+
+
+<!-- 
+    Question 7
+
+
+
+    <title>Guess Game</title>
+    <h1>Guess the Secret Number</h1>
+    <p>Enter a number between 1 and 10:</p>
+    <input type="number" id="guess" min="1" max="10">
+    <button onclick="checkGuess()">Submit</button>
+    <p id="result"></p>
+
+    <script>
+        // Store a secret number
+        const secretNumber = Math.floor(Math.random() * 10) + 1;
+
+        function checkGuess() {
+            const userGuess = parseInt(document.getElementById('guess').value);
+            const result = document.getElementById('result');
+
+            if (userGuess === secretNumber) {
+                result.textContent = "Bingo! Correct answer.";
+            } else if (userGuess + 1 === secretNumber || userGuess - 1 === secretNumber) {
+                result.textContent = "Close enough to the correct answer.";
+            } else {
+                result.textContent = "Try again!";
+            }
+        }
+    </script> -->
+
+<!-- 
+    Question 8
+
+
+    <title>Divisibility Check</title>
+    <h1>Check if a Number is Divisible by 3</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkDivisibility()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkDivisibility() {
+            const number = document.getElementById('numberInput').value;
+            const result = document.getElementById('result');
+            
+            if (number % 3 === 0) {
+                result.textContent = `${number} is divisible by 3.`;
+            } else {
+                result.textContent = `${number} is not divisible by 3.`;
+            }
+        }
+    </script> -->
+
+
+    <!-- Question 9
+
+
+    <title>Even or Odd Checker</title>
+    <h1>Even or Odd Checker</h1>
+    <input type="number" id="numberInput" placeholder="Enter a number">
+    <button onclick="checkEvenOrOdd()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkEvenOrOdd() {
+            const number = document.getElementById('numberInput').value;
+            const result = document.getElementById('result');
+
+            if (number === '') {
+                result.textContent = 'Please enter a number.';
+                return;
+            }
+
+            if (number % 2 === 0) {
+                result.textContent = `${number} is an even number.`;
+            } else {
+                result.textContent = `${number} is an odd number.`;
+            }
+        }
+    </script> -->
+
+
+    <!-- Question 10
+
+    <title>Temperature Checker</title>
+    <h1>Temperature Checker</h1>
+    <label for="temperature">Enter Temperature:</label>
+    <input type="number" id="temperature" name="temperature">
+    <button onclick="checkTemperature()">Check</button>
+    <p id="message"></p>
+
+    <script>
+        function checkTemperature() {
+            var temp = document.getElementById('temperature').value;
+            var message = '';
+
+            if (temp > 40) {
+                message = 'It is too hot outside.';
+            } else if (temp > 30) {
+                message = 'The Weather today is Normal.';
+            } else if (temp > 20) {
+                message = 'Today’s Weather is cool.';
+            } else if (temp > 10) {
+                message = 'OMG! Today’s weather is so Cool.';
+            } else {
+                message = 'It is very cold outside.';
+            }
+
+            document.getElementById('message').innerText = message;
+        }
+    </script> -->
+
+
+    <title>Simple Calculator</title>
+    <h1>Simple Calculator</h1>
+    <form id="calculator">
+        <label for="firstNumber">First Number:</label>
+        <input type="number" id="firstNumber" required><br><br>
+        
+        <label for="secondNumber">Second Number:</label>
+        <input type="number" id="secondNumber" required><br><br>
+        
+        <label for="operation">Operation (+, -, *, /, %):</label>
+        <input type="text" id="operation" required><br><br>
+        
+        <button type="button" onclick="calculate()">Calculate</button>
+    </form>
+    <h2 id="result"></h2>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
